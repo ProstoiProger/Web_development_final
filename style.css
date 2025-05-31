@@ -1,0 +1,191 @@
+:root {
+  --bg-light: #f9f9f9;
+  --bg-dark: #1e1e2f;
+  --text-light: #1c1c1c;
+  --text-dark: #f1f1f1;
+  --muted-light: #6c757d;
+  --muted-dark: #bfc3c9;
+  --card-light: #ffffff;
+  --card-dark: #2c2c3c;
+  --accent: #4f46e5;
+  --primary-gradient: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.navbar {
+  background: var(--primary-gradient) !important;
+  color: white;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar .icon {
+  font-size: 1.4rem;
+}
+
+.btn-toggle {
+  background-color: white;
+  color: #333;
+  border: none;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  transition: background-color var(--transition);
+}
+
+.btn-toggle:hover {
+  background-color: #eee;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: var(--card-light);
+  color: var(--text-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+body.dark .card {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-light);
+}
+
+body.dark .card-subtitle {
+  color: var(--muted-dark);
+}
+
+.views-meta {
+  font-size: 0.875rem;
+  color: var(--muted-light);
+}
+
+body.dark .views-meta {
+  color: var(--muted-dark);
+}
+
+.highlight .card {
+  border-left: 4px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.highlight .card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.footer-custom {
+  background-color: transparent;
+  color: var(--text-light);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark .footer-custom {
+  color: var(--text-dark) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.badge-health {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge-technology {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.badge-arts {
+  background-color: #e83e8c;
+  color: #fff;
+}
+
+.badge-finance {
+  background-color: #fd7e14;
+  color: #fff;
+}
+
+.badge-environment {
+  background-color: #20c997;
+  color: #fff;
+}
+
+.badge-travel {
+  background-color: #6f42c1;
+  color: #fff;
+}
+
+.badge-automotive {
+  background-color: #6610f2;
+  color: #fff;
+}
+
+.badge-society {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.btn-read {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-read:hover {
+  background-color: var(--accent);
+  color: white;
+}
